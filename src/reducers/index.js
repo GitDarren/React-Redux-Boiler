@@ -1,10 +1,13 @@
-import { combineReducers } from 'redux';
-import todos from './todos';
-import dogs from './dogs';
+import { combineReducers } from "redux";
+import { syncHistoryWithStore, routerReducer } from "react-router-redux";
+import todos from "./todos";
+import dogs from "./dogs";
 
 const rootReducer = combineReducers({
   todos,
-  dogs
+  dogs,
+  routing: routerReducer
+
 });
 
 export default rootReducer;
